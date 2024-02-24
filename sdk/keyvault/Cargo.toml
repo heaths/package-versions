@@ -6,3 +6,7 @@ publish = false
 
 [dependencies]
 azure_core = { workspace = true }
+
+[dev-dependencies]
+azure_core_v1 = { package = "azure_core", version = "0.1.0", git = "https://github.com/heaths/package-versions", tag = "azure_core_0.1.0" }
+azure_security_keyvault_v1 = { package = "azure_security_keyvault", version = "0.1.0", git = "https://github.com/heaths/package-versions", tag = "azure_security_keyvault_0.1.0" }

@@ -1,7 +1,13 @@
 use serde::Deserialize;
 
-pub fn hello() -> &'static str {
-    "Hello, world!"
+pub fn hello(who: Option<&str>) -> String {
+    const WHO: &str = "world";
+    let who = match who {
+        Some(s) if s.is_empty() => WHO,
+        Some(s) => s,
+        None => WHO,
+    };
+    format!("Hello, {who}!")
 }
 
 pub fn version() -> String {
@@ -25,7 +31,13 @@ struct CargoPackage {
 mod tests {
     #[test]
     fn hello() {
-        assert_eq!(super::hello(), "Hello, world!");
+        assert_eq!(super::hello(Some("Dave")), "Hello, Dave!");
+    }
+
+    #[test]
+    fn hello_default() {
+        assert_eq!(super::hello(None), "Hello, world!");
+        assert_eq!(super::hello(Some("")), "Hello, world!");
     }
 
     #[test]
