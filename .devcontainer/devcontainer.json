@@ -1,0 +1,17 @@
+{
+  "name": "Rust",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "rust-lang.rust-analyzer",
+        "EditorConfig.EditorConfig",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  }
+}

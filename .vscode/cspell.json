@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "clippy",
+    "keyvault",
+    "rustfmt",
+    "rustlang",
+    "rustup",
+    "serde"
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.md",
+      "dictionaries": [
+        "rust"
+      ]
+    }
+  ]
+}

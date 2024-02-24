@@ -1,0 +1,5 @@
+/
+!.devcontainer/
+
+# Copy to container and run `rustup show` to make sure same channel, components, and toolchains are installed.
+!rust-toolchain.toml

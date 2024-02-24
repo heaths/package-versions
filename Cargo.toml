@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = [
+    "sdk/core",
+    "sdk/keyvault",
+]
+
+[workspace.dependencies]
+azure_core = { version = "0.1.0", path = "sdk/core" }
+serde = { version = "1.0.189", features = ["derive"] }
+toml = "0.8.10"
